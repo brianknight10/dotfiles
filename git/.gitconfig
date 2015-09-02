@@ -1,0 +1,10 @@
+[credential]
+    helper = osxkeychain
+
+[user]
+    name = Brian Knight
+    email = brianknight10@gmail.com
+
+[core]
+    editor = nano
+    excludesfile = ~/.gitignore_global
