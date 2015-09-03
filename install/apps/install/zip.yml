@@ -1,0 +1,25 @@
+---
+- name: Download app
+  get_url: url={{ app_url }} dest="{{ downloads }}{{ app_name }}.zip"
+
+- stat: path="{{ creates }}"
+  register: p
+
+- name: Create an extraction directory
+  file: path="{{ downloads }}{{ app_name }}" state=directory
+
+- name: Extract zip archive
+  unarchive:
+    src="{{ downloads }}{{ app_name }}.zip"
+    dest="{{ downloads }}{{ app_name }}"
+
+- name: Copy app to Applications directory
+  command: cp -R '{{ app_name }}/{{ app_name_extracted }}.app' /Applications chdir={{ downloads }}
+  when: "installer_type == 'app' and p.stat.exists == False"
+
+- name: Install pkg
+  command: sudo installer -package {{ app_name }}/{{ app_name_extracted }}.pkg -target {{ install_target }} chdir={{ downloads }} creates={{ creates }}
+  when: "installer_type == 'pkg'"
+
+- name: Ensure extraction directory is gone
+  file: path={{ downloads }}{{ app_name }}/ state=absent

@@ -1,0 +1,10 @@
+---
+- name: Install Vagrant
+  include: ../../install/dmg.yml
+
+- name: Check list of installed plugins
+  command: vagrant plugin list
+  changed_when: False
+  register: installed_vagrant_plugins
+
+- include: sudoers.yml

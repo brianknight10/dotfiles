@@ -1,0 +1,10 @@
+https://ftp.postgresql.org/pub/pgadmin3/release/v1.20.0/osx/pgadmin3-1.20.0.dmg
+---
+app_name: pgAdmin3
+app_name_pretty: pgAdmin3
+app_url: "https://ftp.postgresql.org/pub/pgadmin3/release/v1.20.0/osx/pgadmin3-1.20.0.dmg"
+installer_type: app
+install_method: dmg
+mount_path: /Volumes/pgAdmin3/
+creates: /Applications/pgAdmin3.app
+downloads: ~/.ansible-downloads/

@@ -1,0 +1,41 @@
+---
+- name: Remove all global node- and npm-related folders
+  sudo: yes
+  file:
+    path={{ item }}
+    state=absent
+  with_items:
+    - /usr/local/lib/node_modules
+    - /usr/local/lib/node
+    - /usr/local/include/node_modules
+    - /usr/local/include/node
+    - /usr/local/bin/node
+    - /usr/local/bin/npm
+    - /usr/local/share/man/man1/node.1
+    - /usr/local/lib/dtrace/node.d
+    - /opt/local/bin/node
+    - /opt/local/include/node
+    - /opt/local/lib/node_modules
+
+- name: Get username
+  command: whoami
+  register: whoami
+  changed_when: false
+
+- name: Remove all local node- and npm-related folders
+  sudo: yes
+  file:
+    path=/Users/{{ whoami.stdout }}/{{ item }}
+    state=absent
+  with_items:
+    - .npm
+    - .node-gyp
+    - .node
+    - .nvm
+    - .npmrc
+    - node-modules
+
+- name: Brew uninstall node
+  homebrew:
+    name=node
+    state=absent

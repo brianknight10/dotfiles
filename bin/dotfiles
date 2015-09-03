@@ -9,17 +9,16 @@ sub_help () {
     echo
     echo "Commands:"
     echo "   help               This help message"
-    echo "   edit               Open dotfiles in default editor ($EDITOR_NOWAIT) and Git GUI ($GIT_GUI)"
+    echo "   edit               Open dotfiles in default editor ($EDITOR_NOWAIT)"
     echo "   reload             Reload dotfiles"
     echo "   test               Run tests"
-    echo "   update             Update packages and pkg managers: OS X Applications, Homebrew/Cask"
+    echo "   update             Update packages and pkg managers: OS X Applications, Homebrew"
     echo "   osx                Apply OS X system defaults"
     echo "   dock               Apply OS X Dock settings"
 }
 
 sub_edit () {
     sh -c "$EDITOR_NOWAIT $DOTFILES_DIR"
-    sh -c "$GIT_GUI $DOTFILES_DIR"
 }
 
 sub_reload () {
@@ -48,8 +47,11 @@ sub_dock () {
 }
 
 sub_install () {
-    local SCRIPT="$DOTFILES_DIR/install/$SUB_COMMAND_NAME.sh"
-    [ -f "$SCRIPT" ] && . "$SCRIPT" || echo "Unable to find script to install $SUB_COMMAND_NAME"
+    if [ "$SUB_COMMAND_NAME" = "all" ]; then
+        ansible-playbook "$DOTFILES_DIR/install/playbook.yml" -i "$DOTFILES_DIR/install/hosts" -e "install_target='${volume// /\\ }'" --ask-sudo-pass
+    else
+        ansible-playbook "$DOTFILES_DIR/install/playbook.yml" -i "$DOTFILES_DIR/install/hosts" -e "install_target='${volume// /\\ }'" --ask-sudo-pass -t "$SUB_COMMAND_NAME"
+    fi
 }
 
 # Make sure to keep this in sync with the available public commands

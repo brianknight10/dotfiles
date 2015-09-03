@@ -1,0 +1,25 @@
+---
+- include: uninstall.yml
+  tags:
+    - uninstall
+
+- name: Get username
+  command: whoami
+  register: whoami
+  changed_when: False
+
+- name: Install nodejs
+  include: ../../install/pkg.yml
+
+- name: Uninstall global npm
+  file:
+    path=/usr/local/bin/npm
+    state=absent
+
+- name: Make tmp folder
+  file:
+    path=~/.tmp
+    state=directory
+
+- name: Install local npm
+  script: npm_local.sh

@@ -1,0 +1,26 @@
+- hosts: all
+  connection: local
+
+  vars:
+    downloads: ~/.ansible-downloads/
+    user_home: "{{ lookup('env','HOME') }}"
+    npm_path: ~/.node/bin/npm
+
+  roles:
+    - { role: apps/virtualbox, tags: [virtualbox,vm,dev] }
+    - { role: apps/vagrant, tags: [vagrant,vm,dev] }
+    - { role: apps/mysqlworkbench, tags: [mysqlworkbench,dev] }
+    - { role: apps/pgadmin, tags: [pgadmin,dev] }
+    - { role: apps/gasmask, tags: [gasmask,dev] }
+    - { role: yaegashi.blockinfile, tags: [vagrant,vm,dev] }
+    - { role: apps/chrome, tags: [chrome,browsers] }
+    - { role: apps/firefox, tags: [firefox,browsers] }
+    - { role: apps/nodejs, tags: [nodejs,sublime,dev] }
+    - { role: apps/sublime, tags: [sublime,dev] }
+
+  pre_tasks:
+    - name: Create ~/.ssh folder
+      file: path=~/.ssh state=directory
+
+    - name: Create Ansible downloads directory
+      file: path={{ downloads }} state=directory

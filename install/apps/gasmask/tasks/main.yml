@@ -1,0 +1,3 @@
+---
+- name: Install Gas Mask
+  include: ../../install/zip.yml

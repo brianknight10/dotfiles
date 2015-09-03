@@ -1,0 +1,9 @@
+---
+app_name: MySQLWorkbench
+app_name_pretty: MySQLWorkbench
+app_url: "http://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-6.3.4-osx-x86_64.dmg"
+mount_path: "/Volumes/MySQL Workbench/"
+installer_type: app
+install_method: dmg
+downloads: ~/.ansible-downloads/
+creates: /Applications/MySQLWorkbench.app

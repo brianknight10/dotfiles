@@ -1,0 +1,7 @@
+---
+- name: Download app
+  get_url: url={{ app_url }} dest={{ downloads }}{{ app_name }}.pkg force=yes
+  register: app_downloaded
+
+- name: Install pkg
+  command: sudo installer -package {{ downloads }}{{ app_name }}.pkg -target {{ install_target }} creates={{ creates }}
