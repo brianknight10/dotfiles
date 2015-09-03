@@ -3,11 +3,16 @@
 # Install Homebrew
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap caskroom/cask
+brew install brew-cask
+brew tap homebrew/versions
+brew tap caskroom/versions
 brew update --system
 
-# Install brew packages
+# Install brew and brew-cask packages
 
 . "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/brew-cask.sh"
 
 # Run Ansib;e playbook
 volume=${1:-'Macintosh HD'}
