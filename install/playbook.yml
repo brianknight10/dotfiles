@@ -15,7 +15,7 @@
     - { role: yaegashi.blockinfile, tags: [vagrant,vm,dev] }
     - { role: apps/chrome, tags: [chrome,browsers] }
     - { role: apps/firefox, tags: [firefox,browsers] }
-    - { role: apps/nodejs, tags: [nodejs,sublime,dev] }
+    - { role: apps/nodejs, tags: [nodejs,dev] }
     - { role: apps/sublime, tags: [sublime,dev] }
 
   pre_tasks:
