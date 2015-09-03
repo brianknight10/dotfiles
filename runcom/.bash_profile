@@ -2,6 +2,11 @@
 
 [ -z "$PS1" ] && return
 
+# Shell
+
+SHELL_BASH=true
+OS="OSX"
+
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles on distros without readlink and/or $BASH_SOURCE/$0)
 
 DOTFILES_DIR="$HOME/.dotfiles"
@@ -40,4 +45,4 @@ unset DOTFILE
 
 # Export
 
-export DOTFILES_DIR EXTRA_DIR
+export DOTFILES_DIR EXTRA_DIR SHELL_BASH OS
