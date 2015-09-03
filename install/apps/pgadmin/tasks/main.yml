@@ -1,3 +1,0 @@
----
-- name: Install pgAdmin
-  include: ../../install/dmg.yml

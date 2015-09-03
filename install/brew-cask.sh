@@ -10,6 +10,7 @@ apps=(
     skype
     slack
     sublime-text3
+    vagrant
     virtualbox
 )
 

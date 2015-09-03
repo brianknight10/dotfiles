@@ -1,3 +1,0 @@
----
-- name: Install MySQLWorkbench
-  include: ../../install/dmg.yml

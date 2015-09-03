@@ -1,7 +1,0 @@
----
-app_name: GasMask
-app_name_extracted: "Gas Mask"
-app_url: "http://gmask.clockwise.ee/files/gas_mask_0.8.1.zip"
-installer_type: app
-downloads: ~/.ansible-downloads/
-creates: "/Applications/Gas\ Mask.app"

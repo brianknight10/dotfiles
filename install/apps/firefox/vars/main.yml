@@ -1,9 +1,0 @@
----
-app_name: Firefox
-app_name_pretty: Firefox
-app_url: "http://ftp.mozilla.org/pub/firefox/releases/40.0b8/mac/en-US/Firefox%2040.0b8.dmg"
-installer_type: app
-install_method: dmg
-mount_path: /Volumes/Firefox/
-downloads: ~/.ansible-downloads/
-creates: /Applications/Firefox.app
