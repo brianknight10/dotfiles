@@ -1,5 +1,6 @@
 apps=(
     adobe-reader
+    dockertoolbox
     dropbox
     evernote
     gas-mask

@@ -9,7 +9,6 @@ apps=(
     ansible
     bash-completion2
     bats
-    boot2docker
     coreutils
     dockutil
     fasd
