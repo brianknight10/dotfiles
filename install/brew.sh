@@ -17,6 +17,7 @@ apps=(
     hub
     httpie
     jq
+    lua53
     mackup
     packer
     peco
