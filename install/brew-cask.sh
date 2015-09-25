@@ -11,6 +11,7 @@ apps=(
     skype
     slack
     sublime-text3
+    terraform
     vagrant
     virtualbox
 )
