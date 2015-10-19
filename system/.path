@@ -17,6 +17,7 @@ prepend-path "/usr/local/sbin"
 prepend-path "~/.node/bin"
 prepend-path "/usr/local/bin/node"
 prepend-path "~/.rvm/bin"
+prepend-path "~/.scripts"
 
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755
