@@ -19,6 +19,7 @@ apps=(
     jq
     lua53
     mackup
+    node
     packer
     peco
     psgrep
