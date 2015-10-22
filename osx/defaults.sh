@@ -338,6 +338,9 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
 defaults write com.apple.terminal "Bell" -bool false
 defaults write com.apple.terminal "VisualBell" -bool false
 
+# Set focus-follows-mouse
+defaults write com.apple.Terminal FocusFollowsMouse -string YES
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
