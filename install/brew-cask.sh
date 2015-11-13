@@ -5,6 +5,7 @@ apps=(
     evernote
     gas-mask
     google-chrome
+    google-cloud-sdk
     mysqlworkbench
     pgadmin3
     screenhero
