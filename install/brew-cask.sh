@@ -6,6 +6,7 @@ apps=(
     gas-mask
     google-chrome
     google-cloud-sdk
+    iterm2
     mysqlworkbench
     pgadmin3
     screenhero
