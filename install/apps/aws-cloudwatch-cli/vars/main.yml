@@ -1,0 +1,4 @@
+---
+app_name: CloudWatch-2010-08-01
+app_url: "http://ec2-downloads.s3.amazonaws.com/CloudWatch-2010-08-01.zip"
+creates: bin/cloudwatch

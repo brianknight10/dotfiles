@@ -1,0 +1,3 @@
+---
+- name: Install CloudWatch CLI
+  include: ../../install/zip.yml

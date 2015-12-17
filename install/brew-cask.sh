@@ -7,6 +7,7 @@ apps=(
     google-chrome
     google-cloud-sdk
     iterm2
+    java
     mysqlworkbench
     pgadmin3
     screenhero
