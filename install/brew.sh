@@ -13,7 +13,6 @@ apps=(
     dockutil
     fasd
     gnu-sed --default-names
-    heroku-toolbelt
     hub
     httpie
     jq
