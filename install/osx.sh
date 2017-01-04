@@ -14,11 +14,6 @@ brew update --system
 . "$DOTFILES_DIR/install/brew.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
 
-# Run Ansib;e playbook
-volume=${1:-'Macintosh HD'}
-ansible-galaxy install -r "$DOTFILES_DIR/install/Rolefile" --force
-ansible-playbook "$DOTFILES_DIR/install/playbook.yml" -i "$DOTFILES_DIR/install/hosts" -e "install_target='${volume// /\\ }'" --ask-sudo-pass
-
 # Install bash (with Homebrew)
 
 brew install bash
