@@ -1,10 +1,9 @@
 apps=(
     adobe-reader
-    dockertoolbox
+    docker-toolbox
     dropbox
     iterm2
     java
-    terraform
     vagrant
     virtualbox
 )

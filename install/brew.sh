@@ -12,7 +12,7 @@ apps=(
     coreutils
     dockutil
     fasd
-    gnu-sed --default-names
+    gnu-sed --with-default-names
     hub
     httpie
     jq
@@ -25,6 +25,7 @@ apps=(
     python
     shellcheck
     ssh-copy-id
+    terraform
     tree
     wget
 )
