@@ -1,6 +1,5 @@
 apps=(
     adobe-reader
-    docker-toolbox
     dropbox
     iterm2
     java
