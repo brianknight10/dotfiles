@@ -1,5 +1,4 @@
 apps=(
-    adobe-reader
     atom
     dropbox
     iterm2
