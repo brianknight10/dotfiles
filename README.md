@@ -12,10 +12,9 @@ These are my dotfiles for an OS X system. Take anything you want, but at your ow
     * Git [hub](http://hub.github.com/)
     * Python 2
 * Dev (FE/JS/JSON): [http-server](https://github.com/nodeapps/http-server), [jq](http://stedolan.github.io/jq/), [nodemon](http://nodemon.io), [peco](http://peco.github.io), [underscore-cli](https://github.com/ddopson/underscore-cli)
-* DevOps: [ansible](http://www.ansible.com/home), [virtualbox](https://www.virtualbox.org/), [vagrant](https://www.vagrantup.com/), [packer](https://packer.io/), [gasmask](https://github.com/2ndalpha/gasmask), [Heroku toolbelt](https://toolbelt.heroku.com/), [Terraform](https://terraform.io/)
+* DevOps: [ansible](http://www.ansible.com/home), [virtualbox](https://www.virtualbox.org/), [vagrant](https://www.vagrantup.com/), [packer](https://packer.io/), [gasmask](https://github.com/2ndalpha/gasmask), [Terraform](https://terraform.io/)
 * Database IDE: [pgAdmin3](http://www.pgadmin.org/), [MySQL Workbench](https://www.mysql.com/products/workbench/)
-* Productivity: [Skype](http://www.skype.com/en/), [Evernote](https://evernote.com/), [Screenhero](https://screenhero.com/), [Google Chrome](http://www.google.com/chrome/), [Dropbox](https://www.dropbox.com), [Adobe Reader](https://get.adobe.com/reader/), [Slack](https://slack.com/)
-* OS X: [dockutil](https://github.com/kcrawford/dockutil), [Mackup](https://github.com/lra/mackup)
+* OS X: [dockutil](https://github.com/kcrawford/dockutil)
 
 ## Install
 
@@ -45,7 +44,7 @@ Or, using wget:
 
     $ dotfiles help
     Usage: dotfiles <command>
-    
+
     Commands:
        help               This help message
        edit               Open dotfiles in default editor (subl)
