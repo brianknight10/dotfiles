@@ -17,7 +17,6 @@ ln -sfv "$DOTFILES_DIR/runcom/.inputrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 
-ln -sfv "$DOTFILES_DIR/etc/mackup/.mackup.cfg" ~
 if [ -f "$DOTFILES_DIR/install/osx.sh" ]; then
     . "$DOTFILES_DIR/install/osx.sh"
 fi
