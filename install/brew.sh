@@ -7,11 +7,13 @@ brew upgrade
 
 apps=(
     ansible
+    remind101/formulae/assume-role
     bash-completion2
     bats
     coreutils
     dockutil
     fasd
+    gnupg
     gnu-sed --with-default-names
     hub
     httpie

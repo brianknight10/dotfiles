@@ -4,6 +4,7 @@
 [user]
     name = Brian Knight
     email = brianknight10@gmail.com
+	signingkey = 3742FCE8B88319F1
 
 [core]
     editor = nano
@@ -60,3 +61,7 @@
 
 [push]
     default = simple
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

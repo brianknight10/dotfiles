@@ -46,4 +46,3 @@ unset DOTFILE
 # Export
 
 export DOTFILES_DIR EXTRA_DIR SHELL_BASH OS
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
